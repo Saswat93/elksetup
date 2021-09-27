@@ -6,7 +6,7 @@ filebeat.config:
 filebeat.autodiscover:
   providers:
     - type: docker
-hints.enabled: true
+      hints.enabled: true
 
 filebeat.inputs:
 - type: docker
