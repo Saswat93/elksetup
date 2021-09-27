@@ -1,0 +1,17 @@
+filebeat.config:
+  modules:
+    path: ${path.config}/modules.d/*.yml
+    reload.enabled: false
+
+filebeat.autodiscover:
+  providers:
+    - type: docker
+hints.enabled: true
+
+filebeat.inputs:
+- type: docker
+  containers.ids:
+    - '859198af8e94be16b8bf61c3d35ca8645ddc5e157295d9e4e195a0a6a610a828'
+
+processors:
+- add_cloud_metadata: ~
